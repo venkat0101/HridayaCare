@@ -150,6 +150,13 @@ if (contactForm) {
             // Submit the form to the hidden iframe
             e.target.submit();
             
+            // Show Success Modal
+            var successModal = document.getElementById('success-modal');
+            if (successModal) {
+                successModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            }
+            
             setTimeout(function() {
                 btn.innerText = originalText;
                 btn.style.background = '';
@@ -159,6 +166,18 @@ if (contactForm) {
                 btn.disabled = false;
                 e.target.reset();
             }, 3500);
+        }
+    });
+}
+
+// Modal Close Logic
+var closeModal = document.getElementById('close-modal');
+if (closeModal) {
+    closeModal.addEventListener('click', function() {
+        var successModal = document.getElementById('success-modal');
+        if (successModal) {
+            successModal.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
 }
