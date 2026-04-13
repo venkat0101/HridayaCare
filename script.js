@@ -146,6 +146,9 @@ if (contactForm) {
             btn.style.border = '1px solid #5e7a6b';
             btn.style.boxShadow = 'none';
             btn.disabled = true;
+
+            // Submit the form to the hidden iframe
+            contactForm.submit();
             
             setTimeout(function() {
                 btn.innerText = originalText;
