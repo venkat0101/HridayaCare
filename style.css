@@ -380,15 +380,16 @@ section { scroll-margin-top: 110px; }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-    .navbar { padding: 0.5rem 2rem; top: 0; }
-    .top-ticker { display: none; }
+    .navbar { padding: 0.5rem 2rem; top: 32px; }
+    /* Top ticker is now visible by default since we removed display:none */
+    
     .navbar.scrolled { padding: 0.5rem 2rem; }
     
     .mobile-menu-toggle { display: flex; }
     
     .navbar nav {
         position: fixed;
-        top: 0;
+        top: 32px;
         right: -100%;
         width: 80%;
         max-width: 350px;
