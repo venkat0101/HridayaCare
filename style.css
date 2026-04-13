@@ -265,9 +265,24 @@ section { scroll-margin-top: 110px; }
 .contact-form { -ms-grid-column: 3; -ms-grid-row: 1; }
 .contact-info h2 { font-size: 3.5rem; margin-top: -0.2rem; margin-bottom: 1rem; letter-spacing: -1px; line-height: 1.1; }
 .contact-info p { color: #000000; color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.8; }
-.info-item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 2rem; font-weight: 500; font-size: 1.15rem; }
-.contact-icon { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-right: 1.2rem; transition: transform 0.3s ease; }
-.contact-icon:hover { transform: scale(1.15); }
+.info-item { 
+    display: -webkit-box; display: -ms-flexbox; display: flex; 
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center; 
+    margin-bottom: 2rem; font-weight: 500; font-size: 1.15rem; 
+    text-decoration: none; color: inherit; transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover { color: #25D366; transform: translateX(8px); }
+.email-link:hover { color: #EA4335; transform: translateX(8px); }
+
+.contact-icon { 
+    display: -webkit-box; display: -ms-flexbox; display: flex; 
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center; 
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; 
+    margin-right: 1.2rem; transition: all 0.3s ease; 
+}
+
+.info-item:hover .contact-icon { transform: scale(1.2); }
 
 .contact-form { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 .form-group { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-bottom: 2rem; }
