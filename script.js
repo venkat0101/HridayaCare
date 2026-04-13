@@ -7,6 +7,28 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
+// Mobile Menu Toggle Logic
+var mobileToggle = document.querySelector('.mobile-menu-toggle');
+var navMenu = document.querySelector('#nav-menu');
+var navLinks = document.querySelectorAll('#nav-menu a');
+
+if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', function() {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        // Prevent scrolling when menu is open
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
 // Navbar subtle shadow on scroll
 var nav = document.querySelector('.navbar');
 
