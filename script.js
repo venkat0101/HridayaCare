@@ -148,7 +148,7 @@ if (contactForm) {
             btn.disabled = true;
 
             // Submit the form to the hidden iframe
-            contactForm.submit();
+            e.target.submit();
             
             setTimeout(function() {
                 btn.innerText = originalText;
